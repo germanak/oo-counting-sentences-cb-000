@@ -18,5 +18,7 @@ class String
     count = 0
 
     self.split{/[.?!]\s/}.each{|sentence| count += 1 if sentence.sentence? || sentence.question? || sentence.exclamation?}
+
+    count
   end
 end
