@@ -17,6 +17,6 @@ class String
   def count_sentences
     count = 0
 
-    self.split{/[.?!]\s/}
+    self.split{/[.?!]\s/}.each{|sentence| count += 1 if sentence.sentence? || sentence.question? || sentence.exclamation?}
   end
 end
